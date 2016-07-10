@@ -8,7 +8,8 @@
 
 // Custom Fonts
 // ----------------------------------
-// @include font-face('lato', '../fonts/lato-regular-webfont');
+@import url(https://fonts.googleapis.com/css?family=Playfair+Display:900);
+@import url(https://fonts.googleapis.com/css?family=Roboto+Mono:300);
 
 // Base Size (must use px value)
 // ----------------------------------
@@ -18,7 +19,7 @@ $base_font_size: rem(16px);
 
 // Headings
 // ----------------------------------
-$header_font_family: Helvetica, Arial, sans-serif;
+$header_font_family: 'playfair display', Helvetica, Arial, sans-serif;
 $header_font_weight: 300;
 $header_line_height: 1.3;
 $header_top_margin: 5px;
@@ -29,7 +30,7 @@ $header_color: $text_color;
 
 // Paragraphs
 // ----------------------------------
-$paragraph_font_family: Helvetica, Arial, sans-serif;
+$paragraph_font_family: 'roboto mono', Helvetica, Arial, sans-serif;
 $paragraph_font_weight: 400;
 $paragraph_font_size: $base_font_size;
 $paragraph_line_height: $base_line_height;

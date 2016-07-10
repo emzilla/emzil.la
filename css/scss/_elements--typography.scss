@@ -1,0 +1,27 @@
+/* Elements
+==================================
+--- Headings, Copy
+------------------------------ */
+
+h1, h2, h3, h4, h5, h6 {
+	font-weight: normal;
+	color: $header_color;
+	font-family: $header_font_family;
+	font-weight: $header_font_weight;
+}
+
+h1 {
+	font-size: rem(48px);
+	@include breakpoint('desktop') {
+		font-size: rem(60px);
+	}
+}
+
+h2 {
+}
+
+h3 {
+}
+
+h4 {
+}

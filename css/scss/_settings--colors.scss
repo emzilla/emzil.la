@@ -32,8 +32,8 @@ $footer_bg: $brand_secondary;
 
 // Text and Links
 // ----------------------------------
-$text_color: $brand_secondary;
-$reverse_text_color: $brand_primary;
+$text_color: $brand_primary;
+$reverse_text_color: #fff;
 $link_color: $brand_tertiary;
 $link_color_hover: darken($brand_tertiary, 15%);
 

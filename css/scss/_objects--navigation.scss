@@ -1,9 +1,10 @@
 /* Objects
 ==================================
---- Wrappers
+--- Navigation
 ------------------------------ */
 
-.wrapper {
-	max-width: $container_max_width;
-	margin: 0 auto;
+.main-navigation {
+	position: absolute;
+	top: 0;
+	left: 0;
 }

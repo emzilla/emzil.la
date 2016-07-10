@@ -2,6 +2,8 @@
 ==================================
 --- Variables
 ------------------------------ */
+@import url(https://fonts.googleapis.com/css?family=Playfair+Display:900);
+@import url(https://fonts.googleapis.com/css?family=Roboto+Mono:300);
 /* Tools
 ==================================
 --- Functions, Mixins, Libraries
@@ -501,10 +503,50 @@ table {
 ==================================
 --- Page
 ------------------------------ */
+html,
+body {
+  height: 100%; }
+
+body {
+  background: url("../img/bg_seamless.jpg");
+  font-family: "roboto mono", Helvetica, Arial, sans-serif;
+  line-height: 1.7;
+  box-align: center;
+  -moz-align-items: center;
+  -ms-align-items: center;
+  -o-align-items: center;
+  align-items: center;
+  -ms-flex-align: center;
+  display: -webkit-box;
+  display: -moz-box;
+  display: box;
+  display: -moz-flex;
+  display: -ms-flexbox;
+  display: flex;
+  box-pack: center;
+  -moz-justify-content: center;
+  -ms-justify-content: center;
+  -o-justify-content: center;
+  justify-content: center;
+  -ms-flex-pack: center; }
+
 /* Elements
 ==================================
 --- Quotes
 ------------------------------ */
+/* Elements
+==================================
+--- Headings, Copy
+------------------------------ */
+h1, h2, h3, h4, h5, h6 {
+  font-weight: normal;
+  color: #000;
+  font-family: "playfair display", Helvetica, Arial, sans-serif;
+  font-weight: 300; }
+
+h1 {
+  font-size: 3rem; }
+
 /* Objects
 ==================================
 --- Design-free objects
@@ -514,14 +556,39 @@ table {
 ==================================
 --- Layout
 ------------------------------ */
+.content .content-container {
+  background: white;
+  padding: 200px 100px;
+  max-width: 1000px; }
+
+.intro {
+  text-align: center; }
+
+.site-info {
+  position: absolute;
+  bottom: 0; }
+
 /* Objects
 ==================================
 --- Media
 ------------------------------ */
 /* Objects
 ==================================
+--- Navigation
+------------------------------ */
+.main-navigation {
+  position: absolute;
+  top: 0;
+  left: 0; }
+
+/* Objects
+==================================
 --- Wrappers
 ------------------------------ */
+.wrapper {
+  max-width: 1200px;
+  margin: 0 auto; }
+
 /* Vendors
 ==================================
 --- 3rd party style overrides

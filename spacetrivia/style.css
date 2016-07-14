@@ -1,0 +1,179 @@
+/* -- Fonts
+------------------ */
+@import url(https://fonts.googleapis.com/css?family=Oswald);
+@import url(https://fonts.googleapis.com/css?family=PT+Mono);
+
+
+/* -- Global
+------------------ */
+html, body {
+	height: 100%;
+	margin: 0;
+	padding: 0;
+}
+
+body {
+	background: url('../spacetrivia/img/bg_space.jpg') no-repeat center;
+	font: 400 16px/1.5 'PT Mono', Monaco, monospace;
+	color: #fff;
+	letter-spacing: .05em;
+	text-shadow: 2px 2px 3px rgba( 35,15,32,0.5);
+	
+}
+
+@media only screen and (min-width: 900px) {
+	body {
+		background-size: cover;
+		font-size: 18px;
+
+		/* Flex Box Layout */
+		display: flex;
+		flex-direction: row;
+		justify-content: center;
+		align-items: center;
+		align-content: center;
+	}
+}
+
+.site-wrapper {
+	margin: 10px;
+}
+	@media only screen and (min-width: 900px) {
+		.site-wrapper {
+			margin: 2rem;
+			padding: 2rem;
+		}
+	}
+
+/* -- Typography
+------------------ */
+
+h1, h2, h3 {
+	font-family: 'Oswald';
+	text-transform: uppercase;	
+}
+
+a {
+	color: #9482ce;
+}
+
+
+/* -- Header
+------------------ */
+
+.site-header {
+
+}
+
+.site-header h1 {
+	text-align: center;
+	font-size: 2rem;
+	letter-spacing: .25rem;
+	margin: 10px;
+}
+
+	@media only screen and (min-width: 900px) {
+		.site-header h1 {
+			font-size: 6rem;
+	    	letter-spacing: .5rem;	
+		}
+	}
+
+/* -- Content - Question
+------------------------- */
+
+.container--content {
+	background: rgba( 35,15,32,0.75);
+	padding: 1rem;
+}
+
+	@media only screen and (min-width: 900px) {
+		.container--content {
+			padding: 2rem 4rem;
+			max-width: 900px;
+		}
+	}
+
+.title--question {
+	font-size: 1.25rem;
+	letter-spacing: .125rem;
+	margin-bottom: 20px;
+	padding-bottom: 10px;
+	border-bottom: 2px solid #fff;
+}
+	
+	@media only screen and (min-width: 900px) {
+		.title--question {
+			font-size: 2.2rem;
+	    	letter-spacing: .25rem;	
+		}
+	}
+
+.question {
+	display: none;
+}
+
+.answer {
+	display: none;
+	color: #9ee0e7;
+	text-transform: uppercase;
+	font-family: 'Oswald';
+	font-size: 1.5rem;
+	margin: 15px 0;
+}
+
+	@media only screen and (min-width: 900px) {
+		.answer {
+			font-size: 2.5rem;
+		}
+	}
+
+.instructions {
+	font-size: .75rem;
+}
+
+/* -- Buttons */
+
+.button {
+	border: 3px solid #dfd73a;	
+	background: transparent;	
+	color: #fff;
+	padding: 10px 20px;
+	font-family: 'PT Mono', Monaco, monospace;
+	font-size: 1rem;
+	outline: none;
+
+	margin: 20px 10px;
+}
+
+.button:hover {
+	cursor: pointer;
+}
+
+	@media only screen and (min-width: 900px) {
+		.button:hover {
+			background: #dfd73a;
+			color: #230f20;
+		}
+	}
+
+
+.button--new-question {
+
+}
+	@media only screen and (min-width: 900px) {
+		.button--new-question{
+			float: right;
+		}
+	}
+
+
+/* -- Footer
+------------------ */
+
+.site-info {
+	position: absolute;
+	bottom: 0;
+	right: 10px;
+	color: #9482ce;
+}

@@ -3,16 +3,8 @@
 --- Page
 ------------------------------ */
 
-html, 
-body {
-	height: 100%;	
-}
-
 body {
 	background: url('../img/bg_seamless.jpg');
 	font-family: $paragraph_font_family;
 	line-height: $base_line_height;
-		@include align-items(center);
-	@include display(flex);
-	@include justify-content(center);
 }

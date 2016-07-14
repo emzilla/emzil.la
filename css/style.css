@@ -503,32 +503,10 @@ table {
 ==================================
 --- Page
 ------------------------------ */
-html,
-body {
-  height: 100%; }
-
 body {
   background: url("../img/bg_seamless.jpg");
   font-family: "roboto mono", Helvetica, Arial, sans-serif;
-  line-height: 1.7;
-  box-align: center;
-  -moz-align-items: center;
-  -ms-align-items: center;
-  -o-align-items: center;
-  align-items: center;
-  -ms-flex-align: center;
-  display: -webkit-box;
-  display: -moz-box;
-  display: box;
-  display: -moz-flex;
-  display: -ms-flexbox;
-  display: flex;
-  box-pack: center;
-  -moz-justify-content: center;
-  -ms-justify-content: center;
-  -o-justify-content: center;
-  justify-content: center;
-  -ms-flex-pack: center; }
+  line-height: 1.7; }
 
 /* Elements
 ==================================
@@ -545,7 +523,12 @@ h1, h2, h3, h4, h5, h6 {
   font-weight: 300; }
 
 h1 {
-  font-size: 3rem; }
+  font-size: 3rem;
+  margin-bottom: 1.25rem; }
+  @media (min-width: 1200px) {
+    h1 {
+      font-size: 3.75rem;
+      margin-bottom: 1.875rem; } }
 
 /* Objects
 ==================================
@@ -557,16 +540,22 @@ h1 {
 --- Layout
 ------------------------------ */
 .content .content-container {
-  background: white;
-  padding: 200px 100px;
-  max-width: 1000px; }
+  background: rgba(255, 255, 255, 0.9);
+  margin: 30px;
+  padding: 50px 20px; }
+  @media (min-width: 1200px) {
+    .content .content-container {
+      background: white;
+      padding: 200px 100px;
+      max-width: 1000px; } }
 
 .intro {
   text-align: center; }
 
 .site-info {
   position: absolute;
-  bottom: 0; }
+  bottom: 0;
+  right: 10px; }
 
 /* Objects
 ==================================
@@ -606,6 +595,19 @@ h1 {
 ==================================
 --- Page Titles
 ------------------------------ */
+/* Page
+==================================
+--- Individual Pages
+------------------------------ */
+/* Page
+==================================
+--- Resume
+------------------------------ */
+.resume-container {
+  margin: 2em;
+  padding: 2em;
+  background: #fff; }
+
 /* Trumps
 ==================================
 --- Helper classes and overrides 

@@ -1,6 +1,6 @@
-# Emzilla Framework
+# Emzil.la
 
-This is a framework for me to start from for static sites, wordpress, etc.
+Personal site. Static.
 
 ### Version
 1.0.0

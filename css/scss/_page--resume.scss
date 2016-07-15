@@ -3,8 +3,83 @@
 --- Resume
 ------------------------------ */
 
+// Global Container
+// ------------------------------
+
 .resume-container {
-	margin: 2em;
-	padding: 2em;
+	margin: 2rem;
+	padding: 2rem;
 	background: #fff;
+
+	@include breakpoint('large') {
+		max-width: 1200px;
+		padding: 2rem 4rem;
+		margin: 2rem auto;
+	}
+}
+
+.resume-container ul {
+	list-style: disc;
+	margin: 10px;
+    padding-left: 10px;;
+
+	@include breakpoint('large') {
+		padding: 10px 20px 10px 40px;	
+	}
+}
+
+// Header
+// ------------------------------
+
+.resume-header {
+	padding-bottom: 20px;
+}
+
+.resume-title {
+	margin-bottom: 0;
+	line-height: 1.2;
+	font-size: rem(36px);
+
+	@include breakpoint('large') {
+		font-size: rem(44px);
+	}
+
+}
+
+
+// Resume Content
+// ------------------------------
+
+.resume-content {
+	
+	.resume-topic {
+		margin-bottom: 30px;
+	}
+
+	.section-title {
+		font-size: rem(28px);
+
+		@include breakpoint('large') {
+			font-size: rem(36px);
+		}
+	}
+	
+	.job {
+		margin: 20px 0 30px;
+	}
+
+	.job-info {
+		font-size: rem(18px);
+		margin: 0 0 20px;
+
+		span {
+			font-size: rem(22px);
+			display: block;
+
+			@include breakpoint('medium') {
+				display: inline-block;
+				font-size: rem(24px);
+			}
+		}
+	}
 }

@@ -2,30 +2,37 @@
 ==================================
 --- Layout
 ------------------------------ */
-.content {
 
+.flex-container {
+	height: 100%;
+	@include display(flex);
+	@include align-items(center);
+	@include justify-content(center);
+}
+
+.site-container {
+	height: 100%;
+	position: relative;
+	z-index: 4;
+}
+
+.content {
+	
 	.content-container {
-		background: rgba(255,255,255,.9);
+		background: #fff;
 		margin: 30px;
 		padding: 50px 20px;
+		box-shadow: 0 0 0 5px rgba(255,255,255,0.3);
 
 		@include breakpoint('large') {
-			background: rgba(255,255,255,1);
 			padding: 200px 100px;
-			max-width: 1000px;
-			max-width: 1000px;
-   			margin: 30px auto;
+			max-width: 800px;
 		}
+		
 	}
 }
 
 
 .intro {
 	text-align: center;
-}
-
-.site-info {
-	position: absolute;
-	bottom: 0;
-	right: 10px;
 }

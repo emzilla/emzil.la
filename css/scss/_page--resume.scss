@@ -6,10 +6,12 @@
 // Global Container
 // ------------------------------
 
-.resume-container {
+.resume-content.content-container {
 	margin: 2rem;
 	padding: 2rem;
 	background: #fff;
+    position: relative;
+	z-index: 4;
 
 	@include breakpoint('large') {
 		max-width: 1200px;
@@ -18,7 +20,7 @@
 	}
 }
 
-.resume-container ul {
+.resume ul {
 	list-style: disc;
 	margin: 10px;
     padding-left: 10px;;

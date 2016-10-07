@@ -3,8 +3,69 @@
 --- Page
 ------------------------------ */
 
+// html,
+// body {
+// 	height: 100%;
+// }
+
+
 body {
 	background: url('../img/bg_seamless.jpg');
 	font-family: $paragraph_font_family;
 	line-height: $base_line_height;
+	
+	&:before,
+	&:after {
+		content: "";
+		display: block;
+		position: absolute;
+		top: 0;
+		left: 0;
+		height: 100%;
+    	width: 100%;
+	}
+
+	&:before {
+		@include background(linear-gradient(#ff2c5f, #ed017f));
+		opacity: 0.8;
+		z-index: 3;
+		animation: background-animation 10s infinite;
+	}
+
+	&:after {
+		@include background(linear-gradient(#ed017f, #ff2c5f));
+		opacity: 0;
+		z-index: 2;
+		animation: background-animation-alt 10s infinite;
+	}
+
+
+}
+
+@keyframes background-animation {
+	0% {
+		opacity: 0.8;
+	}
+
+	50% {
+		opacity: 0.2;
+	}
+
+	100% {
+		opacity: 0.8;
+	}
+}
+
+@keyframes background-animation-alt {
+	0% {
+		opacity: 0.2;
+	}
+
+	50% {
+		opacity: 0.8;
+	}
+
+	100% {
+		opacity: 0.2;
+	}
 }

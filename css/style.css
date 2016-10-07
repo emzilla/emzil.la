@@ -487,8 +487,17 @@ table {
 ==================================
 --- Shared
 ------------------------------ */
+.site-header,
 .site-footer {
-  position: relative; }
+  position: relative;
+  z-index: 4; }
+
+.site-footer {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  text-align: center; }
 
 /* Elements
 ==================================
@@ -510,6 +519,40 @@ body {
   background: url("../img/bg_seamless.jpg");
   font-family: "roboto mono", Helvetica, Arial, sans-serif;
   line-height: 1.7; }
+  body:before, body:after {
+    content: "";
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%; }
+  body:before {
+    background: linear-gradient(#ff2c5f, #ed017f);
+    opacity: 0.8;
+    z-index: 3;
+    animation: background-animation 10s infinite; }
+  body:after {
+    background: linear-gradient(#ed017f, #ff2c5f);
+    opacity: 0;
+    z-index: 2;
+    animation: background-animation-alt 10s infinite; }
+
+@keyframes background-animation {
+  0% {
+    opacity: 0.8; }
+  50% {
+    opacity: 0.2; }
+  100% {
+    opacity: 0.8; } }
+
+@keyframes background-animation-alt {
+  0% {
+    opacity: 0.2; }
+  50% {
+    opacity: 0.8; }
+  100% {
+    opacity: 0.2; } }
 
 /* Elements
 ==================================
@@ -530,7 +573,7 @@ h1 {
   margin-bottom: 1.25rem; }
   @media (min-width: 1200px) {
     h1 {
-      font-size: 3.75rem;
+      font-size: 5rem;
       margin-bottom: 1.875rem; } }
 
 /* Objects
@@ -542,25 +585,44 @@ h1 {
 ==================================
 --- Layout
 ------------------------------ */
+.flex-container {
+  height: 100%;
+  display: -webkit-box;
+  display: -moz-box;
+  display: box;
+  display: -moz-flex;
+  display: -ms-flexbox;
+  display: flex;
+  box-align: center;
+  -moz-align-items: center;
+  -ms-align-items: center;
+  -o-align-items: center;
+  align-items: center;
+  -ms-flex-align: center;
+  box-pack: center;
+  -moz-justify-content: center;
+  -ms-justify-content: center;
+  -o-justify-content: center;
+  justify-content: center;
+  -ms-flex-pack: center; }
+
+.site-container {
+  height: 100%;
+  position: relative;
+  z-index: 4; }
+
 .content .content-container {
-  background: rgba(255, 255, 255, 0.9);
+  background: #fff;
   margin: 30px;
-  padding: 50px 20px; }
+  padding: 50px 20px;
+  box-shadow: 0 0 0 5px rgba(255, 255, 255, 0.3); }
   @media (min-width: 1200px) {
     .content .content-container {
-      background: white;
       padding: 200px 100px;
-      max-width: 1000px;
-      max-width: 1000px;
-      margin: 30px auto; } }
+      max-width: 800px; } }
 
 .intro {
   text-align: center; }
-
-.site-info {
-  position: absolute;
-  bottom: 0;
-  right: 10px; }
 
 /* Objects
 ==================================
@@ -608,22 +670,24 @@ h1 {
 ==================================
 --- Resume
 ------------------------------ */
-.resume-container {
+.resume-content.content-container {
   margin: 2rem;
   padding: 2rem;
-  background: #fff; }
+  background: #fff;
+  position: relative;
+  z-index: 4; }
   @media (min-width: 1200px) {
-    .resume-container {
+    .resume-content.content-container {
       max-width: 1200px;
       padding: 2rem 4rem;
       margin: 2rem auto; } }
 
-.resume-container ul {
+.resume ul {
   list-style: disc;
   margin: 10px;
   padding-left: 10px; }
   @media (min-width: 1200px) {
-    .resume-container ul {
+    .resume ul {
       padding: 10px 20px 10px 40px; } }
 
 .resume-header {

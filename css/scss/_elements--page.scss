@@ -3,16 +3,18 @@
 --- Page
 ------------------------------ */
 
-// html,
-// body {
-// 	height: 100%;
-// }
+html {
+	height: 100%;
+}
 
 
 body {
 	background: url('../img/bg_seamless.jpg');
+	background-attachment: fixed;
 	font-family: $paragraph_font_family;
 	line-height: $base_line_height;
+	overflow: auto;
+	height: 100%;
 	
 	&:before,
 	&:after {
@@ -23,20 +25,21 @@ body {
 		left: 0;
 		height: 100%;
     	width: 100%;
+    	position: fixed;
 	}
 
 	&:before {
-		@include background(linear-gradient(#ff2c5f, #ed017f));
+		@include background(linear-gradient(to bottom right, #351af2, #ff1c64));
 		opacity: 0.8;
 		z-index: 3;
-		animation: background-animation 10s infinite;
+		animation: background-animation 30s infinite;
 	}
 
 	&:after {
-		@include background(linear-gradient(#ed017f, #ff2c5f));
+		@include background(linear-gradient(to bottom right, #ff1c64, #351af2));
 		opacity: 0;
 		z-index: 2;
-		animation: background-animation-alt 10s infinite;
+		animation: background-animation-alt 30s infinite;
 	}
 
 

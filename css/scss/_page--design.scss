@@ -1,0 +1,172 @@
+/* Page
+==================================
+--- Resume
+------------------------------ */
+// @include breakpoint('large') {
+// 	font-size: rem(36px);
+// }
+
+// New Color Variables
+// ------------------------------
+$hotpink: #ff1c64;
+$purple: #351af2;
+$yellow: #edca26;
+$lt-gray: #f2f2f2;
+
+
+// Global Container
+// ------------------------------
+
+.design {
+	background: none;
+
+	img {
+		max-width: 100%;
+		height: auto;
+	}
+
+	.wrapper {
+		position: relative;
+		@include clearfix;
+	}
+}
+
+// Typography
+// ------------------------------
+
+.design {
+	h1 {
+		font-size: rem(40px);
+	}
+	p {
+		margin: 0 0 10px;
+	}
+}
+
+// Header
+// ------------------------------
+
+.design-header {
+	position: relative;
+	margin: 10px 0 50px;
+
+	.design-page-title {
+		text-align: center;
+	}
+
+	.design-page-intro {
+		@include breakpoint('large') {
+			width: 600px;
+			margin: 0 auto;
+		}
+
+	}
+}
+
+
+// Project Content
+// ------------------------------
+
+.project {
+	margin-bottom: 50px;
+	@include breakpoint('large') {
+		margin-bottom: 100px;
+	}
+}
+
+.primary-content {
+	padding: 20px;
+
+	@include breakpoint('large') {
+		padding: 20px 0 50px;
+	}
+
+	.primary-title {
+		display: block;
+		background: $brand_primary;
+		color: $reverse_text_color;
+		padding: 10px 30px;
+		letter-spacing: .05rem;
+
+		@include breakpoint('large') {
+			padding: 10px 100px;
+			position: absolute;
+		    top: -30px;
+		    left: -40px;
+		}
+	}
+
+	.primary-description {
+		margin: 40px 0;
+		background: $lt-gray;
+		padding: 30px;
+
+		@include breakpoint('large') {
+			position: absolute;
+		    bottom: -200px;
+		    left: -40px;
+		    width: 420px;
+		    padding: 50px;
+		    box-shadow: 8px 8px 0 0 $brand_primary;
+		}
+	}
+}
+
+.project-slider {
+	
+	@include breakpoint('large') {
+		width: 600px;
+		margin-left: calc(100% - 600px);	
+	}
+}
+
+.secondary-content {
+	padding: 20px;
+
+	.image-container {
+		text-align: center;
+		@include breakpoint('large') {
+			width: 40%;
+			float: left;
+		}
+	}
+	
+	.secondary-description {
+		@include breakpoint('large') {
+			width: 60%;
+			display: inline-block;
+			padding: 50px 40px;
+		}
+	}
+}
+
+.secondary-content:nth-of-type(even){
+	.image-container {
+		@include breakpoint('large') {
+			float: right;
+		}
+	}		
+}
+
+.design .button {
+	display: block;
+	background: $purple;
+	padding: 5px 30px;
+	margin: 20px auto;
+	text-decoration: none;
+	color: $reverse_text_color;
+	text-align: center;
+	width: 230px;
+	@include breakpoint('large') {
+		margin: 20px 0;
+	}
+
+	&:hover {
+		@include breakpoint('large') {
+			@include background(linear-gradient(to bottom right, #351af2, #ff1c64));
+		}
+	}
+}
+
+
+

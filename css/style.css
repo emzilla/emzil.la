@@ -1059,8 +1059,12 @@ h1 {
       padding: 50px 40px; } }
 
 @media (min-width: 1200px) {
-  .secondary-content:nth-of-type(even) .image-container {
+  .image-container.alt {
     float: right; } }
+
+@media (min-width: 1200px) {
+  .content-top-padding {
+    padding-top: 100px; } }
 
 .design .button {
   display: block;

@@ -140,13 +140,19 @@ $lt-gray: #f2f2f2;
 	}
 }
 
-.secondary-content:nth-of-type(even){
-	.image-container {
-		@include breakpoint('large') {
-			float: right;
-		}
-	}		
+
+.image-container.alt {
+	@include breakpoint('large') {
+		float: right;
+	}
+}		
+
+.content-top-padding {
+	@include breakpoint('large') {
+		padding-top: 100px;
+	}
 }
+
 
 .design .button {
 	display: block;

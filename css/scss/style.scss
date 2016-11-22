@@ -57,6 +57,7 @@
 --- 3rd party style overrides
 ------------------------------ */
 	@import "vendors";
+	@import "vendors--owl-carousel";
 
 
 /* Components
@@ -73,6 +74,7 @@
 --- Individual Pages
 ------------------------------ */
 @import "page--resume";
+@import "page--design";
 
 
 /* Trumps

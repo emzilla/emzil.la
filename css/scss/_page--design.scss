@@ -109,14 +109,27 @@ $lt-gray: #f2f2f2;
 		    padding: 50px;
 		    box-shadow: 8px 8px 0 0 $brand_primary;
 		}
+
+		&:after {
+			content: "";
+			position: relative;
+			display: block;
+			height: 100%;
+			width: 100%;
+			box-shadow: 0 0 40px 0 rgba(0,0,0,.4);
+		}
 	}
 }
 
 .project-slider {
+	background: $lt-gray;
 	
+
 	@include breakpoint('large') {
 		width: 600px;
-		margin-left: calc(100% - 600px);	
+		margin-left: calc(100% - 600px);
+		margin-top: 20px;	
+		box-shadow: 8px 8px 0 0 $brand_primary;
 	}
 }
 
@@ -128,6 +141,12 @@ $lt-gray: #f2f2f2;
 		@include breakpoint('large') {
 			width: 40%;
 			float: left;
+		}
+
+		img {
+			@include breakpoint('large') {
+				box-shadow: 8px 8px 0 0 $brand_primary;
+			}
 		}
 	}
 	

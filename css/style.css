@@ -1038,11 +1038,22 @@ h1 {
         width: 420px;
         padding: 50px;
         box-shadow: 8px 8px 0 0 #000; } }
+    .primary-content .primary-description:after {
+      content: "";
+      position: relative;
+      display: block;
+      height: 100%;
+      width: 100%;
+      box-shadow: 0 0 40px 0 rgba(0, 0, 0, 0.4); }
 
-@media (min-width: 1200px) {
-  .project-slider {
-    width: 600px;
-    margin-left: calc(100% - 600px); } }
+.project-slider {
+  background: #f2f2f2; }
+  @media (min-width: 1200px) {
+    .project-slider {
+      width: 600px;
+      margin-left: calc(100% - 600px);
+      margin-top: 20px;
+      box-shadow: 8px 8px 0 0 #000; } }
 
 .secondary-content {
   padding: 20px; }
@@ -1052,6 +1063,9 @@ h1 {
       .secondary-content .image-container {
         width: 40%;
         float: left; } }
+    @media (min-width: 1200px) {
+      .secondary-content .image-container img {
+        box-shadow: 8px 8px 0 0 #000; } }
   @media (min-width: 1200px) {
     .secondary-content .secondary-description {
       width: 60%;

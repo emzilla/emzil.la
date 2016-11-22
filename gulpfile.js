@@ -36,7 +36,7 @@ gulp.task('styles', function(){
 });
 
 gulp.task('scripts', function(){
-  return gulp.src(['js/vendors/*.js', 'js/init.js'])
+  return gulp.src(['js/vendors/*.js', 'js/pages/*.js', 'js/init.js'])
     .pipe(plumber({
       errorHandler: function (error) {
         console.log(error.message);

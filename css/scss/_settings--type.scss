@@ -9,11 +9,11 @@
 // Custom Fonts
 // ----------------------------------
 @import url(https://fonts.googleapis.com/css?family=Playfair+Display:900);
-@import url(https://fonts.googleapis.com/css?family=Roboto+Mono:300);
+@import url(https://fonts.googleapis.com/css?family=Poppins:300,600);
 
 // Base Size (must use px value)
 // ----------------------------------
-$base_line_height: 1.5;
+$base_line_height: 1.8;
 $base_font_size: rem(18px);
 
 
@@ -30,8 +30,9 @@ $header_color: $text_color;
 
 // Paragraphs
 // ----------------------------------
-$paragraph_font_family: 'roboto mono', Helvetica, Arial, sans-serif;
-$paragraph_font_weight: 400;
+$paragraph_font_family: 'Poppins', Helvetica, Arial, sans-serif;
+$paragraph_font_weight: 300;
+$paragraph_font_weight_bold: 600;
 $paragraph_font_size: $base_font_size;
 $paragraph_line_height: $base_line_height;
 $paragraph_margin_bottom: 20px;

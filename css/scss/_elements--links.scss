@@ -2,3 +2,18 @@
 ==================================
 --- Links
 ------------------------------ */
+
+a {
+  color: $blue;
+  text-decoration-skip: ink;
+  transition: color 0.2s ease;
+
+  &:hover {
+    color: $purple;
+  }
+  
+  &.home-link {
+    text-decoration: none;
+  }
+
+}

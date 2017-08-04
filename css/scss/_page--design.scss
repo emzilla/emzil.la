@@ -18,7 +18,6 @@ $lt-gray: #f2f2f2;
 // ------------------------------
 
 .design {
-	background: none;
 
 	img {
 		max-width: 100%;
@@ -29,6 +28,10 @@ $lt-gray: #f2f2f2;
 		position: relative;
 		@include clearfix;
 	}
+}
+
+.design-container {
+	background: #fff;
 }
 
 // Typography

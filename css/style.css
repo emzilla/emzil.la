@@ -3,7 +3,7 @@
 --- Variables
 ------------------------------ */
 @import url(https://fonts.googleapis.com/css?family=Playfair+Display:900);
-@import url(https://fonts.googleapis.com/css?family=Roboto+Mono:300);
+@import url(https://fonts.googleapis.com/css?family=Poppins:300,600);
 /* Tools
 ==================================
 --- Functions, Mixins, Libraries
@@ -504,6 +504,15 @@ table {
 ==================================
 --- Links
 ------------------------------ */
+a {
+  color: #1e005a;
+  text-decoration-skip: ink;
+  transition: color 0.2s ease; }
+  a:hover {
+    color: #b206be; }
+  a.home-link {
+    text-decoration: none; }
+
 /* Elements
 ==================================
 --- Lists
@@ -518,29 +527,10 @@ html {
 body {
   background: url("../img/bg_seamless.jpg");
   background-attachment: fixed;
-  font-family: "roboto mono", Helvetica, Arial, sans-serif;
-  line-height: 1.5;
+  font-family: "Poppins", Helvetica, Arial, sans-serif;
+  line-height: 1.8;
   overflow: auto;
   height: 100%; }
-  body:before, body:after {
-    content: "";
-    display: block;
-    position: absolute;
-    top: 0;
-    left: 0;
-    height: 100%;
-    width: 100%;
-    position: fixed; }
-  body:before {
-    background: linear-gradient(to bottom right, #351af2, #ff1c64);
-    opacity: 0.8;
-    z-index: 3;
-    animation: background-animation 30s infinite; }
-  body:after {
-    background: linear-gradient(to bottom right, #ff1c64, #351af2);
-    opacity: 0;
-    z-index: 2;
-    animation: background-animation-alt 30s infinite; }
 
 @keyframes background-animation {
   0% {
@@ -589,36 +579,41 @@ h1 {
 --- Layout
 ------------------------------ */
 .flex-container {
-  height: 100%;
-  display: -webkit-box;
-  display: -moz-box;
-  display: box;
-  display: -moz-flex;
-  display: -ms-flexbox;
-  display: flex;
-  box-align: center;
-  -moz-align-items: center;
-  -ms-align-items: center;
-  -o-align-items: center;
-  align-items: center;
-  -ms-flex-align: center;
-  box-pack: center;
-  -moz-justify-content: center;
-  -ms-justify-content: center;
-  -o-justify-content: center;
-  justify-content: center;
-  -ms-flex-pack: center; }
+  height: 100%; }
+  @media (min-width: 800px) {
+    .flex-container {
+      display: -webkit-box;
+      display: -moz-box;
+      display: box;
+      display: -moz-flex;
+      display: -ms-flexbox;
+      display: flex;
+      box-align: center;
+      -moz-align-items: center;
+      -ms-align-items: center;
+      -o-align-items: center;
+      align-items: center;
+      -ms-flex-align: center;
+      box-pack: center;
+      -moz-justify-content: center;
+      -ms-justify-content: center;
+      -o-justify-content: center;
+      justify-content: center;
+      -ms-flex-pack: center; } }
 
 .site-container {
   position: relative;
-  background: #fff;
+  background: #f8faf0;
+  box-shadow: 0 0 30px 0 rgba(0, 0, 0, 0.2);
   margin: 30px;
-  padding: 30px;
-  box-shadow: 0 0 0 5px rgba(255, 255, 255, 0.3);
+  padding: 30px 60px;
   z-index: 4; }
+  @media (min-width: 800px) {
+    .site-container {
+      padding: 30px 60px; } }
   @media (min-width: 1200px) {
     .site-container {
-      padding: 100px; } }
+      padding: 60px 100px; } }
 
 @media (min-width: 1200px) {
   .content .content-container {
@@ -631,6 +626,10 @@ h1 {
 ==================================
 --- Media
 ------------------------------ */
+img {
+  max-width: 100%;
+  height: auto; }
+
 /* Objects
 ==================================
 --- Navigation
@@ -921,7 +920,7 @@ h1 {
 .resume .site-container {
   margin: 30px;
   padding: 30px;
-  background: #fff;
+  background: #f8faf0;
   position: relative;
   z-index: 4; }
   @media (min-width: 1200px) {
@@ -976,16 +975,18 @@ h1 {
 ==================================
 --- Resume
 ------------------------------ */
-.design {
-  background: none; }
-  .design img {
-    max-width: 100%;
-    height: auto; }
-  .design .wrapper {
-    position: relative;
-    content: "";
-    display: table;
-    table-layout: fixed; }
+.design img {
+  max-width: 100%;
+  height: auto; }
+
+.design .wrapper {
+  position: relative;
+  content: "";
+  display: table;
+  table-layout: fixed; }
+
+.design-container {
+  background: #fff; }
 
 .design h1 {
   font-size: 2.5rem; }
@@ -1095,17 +1096,3 @@ h1 {
   @media (min-width: 1200px) {
     .design .button:hover {
       background: linear-gradient(to bottom right, #351af2, #ff1c64); } }
-
-/* Trumps
-==================================
---- Helper classes and overrides 
---- Highest specificity layer
------------------------------- */
-/* Trumps
-==================================
---- Links
------------------------------- */
-/* Trumps
-==================================
---- Widths
------------------------------- */

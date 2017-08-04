@@ -15,34 +15,6 @@ body {
 	line-height: $base_line_height;
 	overflow: auto;
 	height: 100%;
-	
-	&:before,
-	&:after {
-		content: "";
-		display: block;
-		position: absolute;
-		top: 0;
-		left: 0;
-		height: 100%;
-    	width: 100%;
-    	position: fixed;
-	}
-
-	&:before {
-		@include background(linear-gradient(to bottom right, #351af2, #ff1c64));
-		opacity: 0.8;
-		z-index: 3;
-		animation: background-animation 30s infinite;
-	}
-
-	&:after {
-		@include background(linear-gradient(to bottom right, #ff1c64, #351af2));
-		opacity: 0;
-		z-index: 2;
-		animation: background-animation-alt 30s infinite;
-	}
-
-
 }
 
 @keyframes background-animation {

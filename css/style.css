@@ -506,7 +506,8 @@ table {
 ------------------------------ */
 a {
   color: #1e005a;
-  text-decoration-skip: ink;
+  -webkit-text-decoration-skip: ink;
+          text-decoration-skip: ink;
   transition: color 0.2s ease; }
   a:hover {
     color: #b206be; }
@@ -986,7 +987,7 @@ img {
   table-layout: fixed; }
 
 .design-container {
-  background: #fff; }
+  background: #f2f2f2; }
 
 .design h1 {
   font-size: 2.5rem; }
@@ -1014,7 +1015,7 @@ img {
   padding: 20px; }
   @media (min-width: 1200px) {
     .primary-content {
-      padding: 20px 0 50px; } }
+      padding: 20px 0 100px; } }
   .primary-content .primary-title {
     display: block;
     background: #000;
@@ -1034,7 +1035,7 @@ img {
     @media (min-width: 1200px) {
       .primary-content .primary-description {
         position: absolute;
-        bottom: -200px;
+        bottom: -90px;
         left: -40px;
         width: 420px;
         padding: 50px;

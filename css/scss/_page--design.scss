@@ -31,7 +31,7 @@ $lt-gray: #f2f2f2;
 }
 
 .design-container {
-	background: #fff;
+	background: $lt-gray;
 }
 
 // Typography
@@ -81,7 +81,7 @@ $lt-gray: #f2f2f2;
 	padding: 20px;
 
 	@include breakpoint('large') {
-		padding: 20px 0 50px;
+		padding: 20px 0 100px;
 	}
 
 	.primary-title {
@@ -106,7 +106,7 @@ $lt-gray: #f2f2f2;
 
 		@include breakpoint('large') {
 			position: absolute;
-		    bottom: -200px;
+		    bottom: -90px;
 		    left: -40px;
 		    width: 420px;
 		    padding: 50px;
